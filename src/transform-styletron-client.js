@@ -14,7 +14,6 @@ export default function transformStyletronClient(babel) {
             let k = resolveToValue(o);
             if (t.isObjectExpression(k)) {
               const props = k.node.properties;
-
               k.set("properties", [
                 ...props,
                 t.objectProperty(
