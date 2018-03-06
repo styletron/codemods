@@ -10,11 +10,11 @@ export default function transformStyletronClient(babel) {
         let p = path.parentPath;
         if (t.isNewExpression(p)) {
           if (p.get("arguments.length") > 1) {
-            let o = p.get("arguments.1");
-            let k = resolveToValue(o);
-            if (t.isObjectExpression(k)) {
-              const props = k.node.properties;
-              k.set("properties", [
+            let optsArg = p.get("arguments.1");
+            let resolved = resolveToValue(optsArg);
+            if (t.isObjectExpression(resolved)) {
+              const props = resolved.node.properties;
+              resolved.set("properties", [
                 ...props,
                 t.objectProperty(
                   t.identifier("hydrate"),
@@ -22,7 +22,7 @@ export default function transformStyletronClient(babel) {
                 ),
               ]);
             }
-            p.set("arguments", [o.node]);
+            p.set("arguments", [optsArg.node]);
           }
         }
       });
