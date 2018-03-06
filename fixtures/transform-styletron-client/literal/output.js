@@ -1,4 +1,4 @@
-import StyletronClient from "styletron-client";
+import StyletronClient from "styletron-engine-atomic";
 const ssrStyles = document.getElementsByClassName('_styletron_hydrate');
 const instance = new StyletronClient({
   prefix: '_',

@@ -1,11 +1,13 @@
-import {createNamedModuleVisitor, resolveToValue} from "babel-utils";
+import {
+  getImportDeclarationVisitor,
+  visitNamedImports,
+  resolveToValue,
+} from "babel-utils";
 
 export default function transformStyletronClient(babel) {
   const {types: t} = babel;
-  const visitor = createNamedModuleVisitor(
-    "default",
-    "styletron-client",
-    (ctx, paths) => {
+  const visitor = getImportDeclarationVisitor("styletron-client", path => {
+    visitNamedImports(path, "default", paths => {
       paths.forEach(path => {
         let p = path.parentPath;
         if (t.isNewExpression(p)) {
@@ -26,8 +28,10 @@ export default function transformStyletronClient(babel) {
           }
         }
       });
-    },
-  );
+    });
+
+    path.set("source", t.stringLiteral("styletron-engine-atomic"));
+  });
 
   return {
     name: "styletron-codemods/styletron-client",

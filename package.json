@@ -28,6 +28,6 @@
   },
   "license": "MIT",
   "dependencies": {
-    "babel-utils": "^1.1.0"
+    "babel-utils": "^2.1.0"
   }
 }
