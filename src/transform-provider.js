@@ -1,4 +1,8 @@
-import {getImportDeclarationVisitor, visitNamedSpecifiers, visitSpecifierReferences} from "babel-utils";
+import {
+  getImportDeclarationVisitor,
+  visitNamedSpecifiers,
+  visitSpecifierReferences,
+} from "babel-utils";
 
 export default function transformStyletronClient(babel) {
   const {types: t} = babel;
@@ -20,7 +24,7 @@ export default function transformStyletronClient(babel) {
           }
         });
       });
-      specifier.set("imported", t.identifier("Provider"))
+      specifier.set("imported", t.identifier("Provider"));
     });
   });
 
