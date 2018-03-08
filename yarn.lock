@@ -514,9 +514,9 @@ babel-types@^6.18.0, babel-types@^6.26.0:
     lodash "^4.17.4"
     to-fast-properties "^1.0.3"
 
-babel-utils@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/babel-utils/-/babel-utils-2.1.0.tgz#90b0ac1cbb4ecd99e651732e9deae95a6fd2536e"
+babel-utils@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/babel-utils/-/babel-utils-2.1.1.tgz#d7da8652acc401a63ddfc1b1ca6710ba43c84b75"
 
 babylon@7.0.0-beta.40, babylon@^7.0.0-beta.40:
   version "7.0.0-beta.40"

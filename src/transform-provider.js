@@ -29,7 +29,7 @@ export default function transformStyletronClient(babel) {
   });
 
   return {
-    name: "styletron-codemods/styletron-client",
+    name: "styletron-codemods/transform-provider",
     visitor,
   };
 }

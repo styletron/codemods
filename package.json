@@ -7,6 +7,9 @@
     "test": "jest src",
     "lint": "eslint --ignore-path .gitignore src"
   },
+  "dependencies": {
+    "babel-utils": "^2.1.1"
+  },
   "peerDependencies": {
     "@babel/types": "^7.0.0-beta.40"
   },
@@ -26,8 +29,5 @@
     "jest": "^22.4.2",
     "prettier": "^1.11.1"
   },
-  "license": "MIT",
-  "dependencies": {
-    "babel-utils": "^2.1.0"
-  }
+  "license": "MIT"
 }

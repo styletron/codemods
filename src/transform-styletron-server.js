@@ -15,7 +15,7 @@ export default function transformStyletronServer(babel) {
   });
 
   return {
-    name: "styletron-codemods/styletron-server",
+    name: "styletron-codemods/transform-styletron-server",
     visitor,
   };
 }
